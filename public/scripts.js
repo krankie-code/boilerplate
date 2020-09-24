@@ -28,14 +28,14 @@ scene.add(backLight);
 var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setTexturePath('./examples/3d-obj-loader/assets/');
 mtlLoader.setPath('./examples/3d-obj-loader/assets/');
-mtlLoader.load('d42e1845-f80e-424f-abc8-cf27ba30bee1.mtl', function (materials) {	
+mtlLoader.load('r2-d2.mtl', function (materials) {	
 
     materials.preload();
 
     var objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
     objLoader.setPath('./examples/3d-obj-loader/assets/');
-    objLoader.load('world.obj', function (object) {
+    objLoader.load('r2-d2.obj', function (object) {
 
         scene.add(object);
         object.position.y -= 60;

@@ -32,14 +32,14 @@
 
  // Create a material
  var mtlLoader = new THREE.MTLLoader();
- mtlLoader.load('./assets/r2-d2.mtl', function (materials) {
+ mtlLoader.load('../../examples/3d-obj-loader/assets/r2-d2.mtl', function (materials) {
 
      materials.preload();
 
      // Load the object
      var objLoader = new THREE.OBJLoader();
      objLoader.setMaterials(materials);
-     objLoader.load('./assets/r2-d2.obj', function (object) {
+     objLoader.load('../../examples/3d-obj-loader/assets/r2-d2.obj', function (object) {
          scene.add(object);
          ourObj2 = object;
          object.position.z -= 70;
